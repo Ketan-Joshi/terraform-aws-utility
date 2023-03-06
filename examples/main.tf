@@ -7,4 +7,7 @@ module "prometheus" {
     vpc_id = ""
     subnet_id = ""
     postgresql_endpoint = ""
+    sonarqube_password = ""
+    sonarqube_user = ""
+    sonarqube_database = ""
 }

@@ -13,6 +13,9 @@ data "template_file" "userdata" {
   template = file("${path.module}/utility.sh")
   vars = {
     postgresql_endpoint = var.postgresql_endpoint
+    sonarqube_password=var.sonarqube_password
+    sonarqube_user=var.sonarqube_user
+    sonarqube_database=var.sonarqube_database
   }
 }
 resource "aws_instance" "utility" {

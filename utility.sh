@@ -2,6 +2,9 @@
 
 # Environment Variables
 postgresql_endpoint=${postgresql_endpoint}
+sonarqube_password=${sonarqube_password}
+sonarqube_user=${sonarqube_user}
+sonarqube_database=${sonarqube_database}
 
 # update the package list
 sudo apt update -y
@@ -53,9 +56,9 @@ EOF'
 # configure SonarQube to use the RDS database
 cat <<EOF >>/opt/sonarqube/conf/sonar.properties
 # Configure the database connection
-sonar.jdbc.username=sonarqube
-sonar.jdbc.password=social@sonarqube
-sonar.jdbc.url=jdbc:postgresql://$postgresql_endpoint:5432/sonarqube?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useConfigs=maxPerformance
+sonar.jdbc.username=$sonarqube_user
+sonar.jdbc.password=$sonarqube_password
+sonar.jdbc.url=jdbc:postgresql://$postgresql_endpoint:5432/$sonarqube_database?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useConfigs=maxPerformance
 
 # Configure the web server port
 sonar.web.port=9000

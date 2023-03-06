@@ -33,3 +33,18 @@ variable "postgresql_endpoint" {
     type        = string
     default     = ""
 }
+variable "sonarqube_user" {
+    description = "This defines utility sonarqube user"
+    type        = string
+    default     = ""
+}
+variable "sonarqube_password" {
+    description = "This defines utility sonarqube password"
+    type        = string
+    default     = ""
+}
+variable "sonarqube_database" {
+    description = "This defines utility sonarqube database"
+    type        = string
+    default     = ""
+}

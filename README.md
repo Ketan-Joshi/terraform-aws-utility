@@ -54,6 +54,9 @@ No modules.
 | <a name="input_instance_type_utility"></a> [instance\_type\_utility](#input\_instance\_type\_utility) | This defines utility (Sonarqube + PHPMyAdmin) Instance Size/Type | `string` | `""` | no |
 | <a name="input_pem_key_name"></a> [pem\_key\_name](#input\_pem\_key\_name) | This defines Pem Key Name | `string` | `""` | no |
 | <a name="input_postgresql_endpoint"></a> [postgresql\_endpoint](#input\_postgresql\_endpoint) | This defines utility PostgreSQL Endpoint | `string` | `""` | no |
+| <a name="input_sonarqube_database"></a> [sonarqube\_database](#input\_sonarqube\_database) | This defines utility sonarqube database | `string` | `""` | no |
+| <a name="input_sonarqube_password"></a> [sonarqube\_password](#input\_sonarqube\_password) | This defines utility sonarqube password | `string` | `""` | no |
+| <a name="input_sonarqube_user"></a> [sonarqube\_user](#input\_sonarqube\_user) | This defines utility sonarqube user | `string` | `""` | no |
 | <a name="input_subnet_id"></a> [subnet\_id](#input\_subnet\_id) | This defines utility (Sonarqube + PHPMyAdmin) Instance VPC Subnet ID | `string` | `""` | no |
 | <a name="input_volume_size_utility"></a> [volume\_size\_utility](#input\_volume\_size\_utility) | This defines utility (Sonarqube + PHPMyAdmin) Instance Root Volume Size | `number` | `"30"` | no |
 | <a name="input_vpc_cidr_block"></a> [vpc\_cidr\_block](#input\_vpc\_cidr\_block) | This defines utility (Sonarqube + PHPMyAdmin) Instance VPC CIDR Block | `string` | `""` | no |
