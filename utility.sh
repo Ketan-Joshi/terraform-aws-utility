@@ -8,8 +8,10 @@ sonarqube_database=${sonarqube_database}
 
 # update the package list
 sudo apt update -y
+
 # install java
 #sudo apt install java-1.8.0-openjdk-devel -y
+sudo apt install unzip
 sudo apt-get install openjdk-8-jdk -y
 
 # download the SonarQube distribution
