@@ -32,11 +32,11 @@ resource "aws_instance" "utility" {
     aws_key_pair.ssh_key
   ]
   tags = {
-    Name = "nw-social-utility-${var.environment}"
+    Name = "nw-social-utility"
   }
 }
 resource "aws_security_group" "utility_sg" {
-  name = "nw-social-utility-${var.environment}-sg"
+  name = "nw-social-utility-sg"
   vpc_id =  var.vpc_id
   ingress {
     description = "ingress rules"
@@ -67,6 +67,6 @@ resource "aws_security_group" "utility_sg" {
     to_port = 0
   }
   tags = {
-    Name = "nw-social-utility-${var.environment}-sg"
+    Name = "nw-social-utility-sg"
   }
 }
