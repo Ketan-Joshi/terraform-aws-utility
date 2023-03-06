@@ -12,7 +12,7 @@ sudo apt update -y
 # install java
 #sudo apt install java-1.8.0-openjdk-devel -y
 sudo apt install unzip
-sudo apt-get install openjdk-8-jdk -y
+sudo apt-get install openjdk-11-jdk -y
 
 # download the SonarQube distribution
 wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.9.10.61524.zip
@@ -65,6 +65,8 @@ sonar.jdbc.url=jdbc:postgresql://$postgresql_endpoint:5432/$sonarqube_database?u
 # Configure the web server port
 sonar.web.port=9000
 EOF
+
+sudo sysctl -w vm.max_map_count=262144
 
 # start the SonarQube service
 sudo systemctl start sonar
