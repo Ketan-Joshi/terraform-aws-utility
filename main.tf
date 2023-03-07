@@ -55,6 +55,13 @@ resource "aws_security_group" "utility_sg" {
     protocol = "tcp"
     to_port = 9000
   }
+  ingress {
+    description = "ingress rules"
+    cidr_blocks = [var.vpc_cidr_block,"182.71.160.184/29","61.12.91.216/29"]
+    from_port = 80
+    protocol = "tcp"
+    to_port = 80
+  }
   egress {
     description = "egress rules"
     cidr_blocks = [ "0.0.0.0/0" ]
