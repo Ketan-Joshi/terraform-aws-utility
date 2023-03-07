@@ -48,3 +48,8 @@ variable "sonarqube_database" {
     type        = string
     default     = ""
 }
+variable "utility_ami" {
+    description = "PHPMyAdmin AMI"
+    type = string
+    default = ""
+}

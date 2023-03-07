@@ -19,7 +19,7 @@ data "template_file" "userdata" {
   }
 }
 resource "aws_instance" "utility" {
-  ami = "ami-09cd747c78a9add63"
+  ami = var.utility_ami
   instance_type = var.instance_type_utility
   user_data = data.template_file.userdata.rendered
   key_name = var.pem_key_name
