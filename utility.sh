@@ -76,22 +76,3 @@ sudo systemctl enable sonar
 
 # check the status of the SonarQube service
 sudo systemctl status sonar
-
-sudo apt install nginx -y
-
-sudo bash -c 'cat <<EOF > /etc/nginx/default.d/sonar.conf
-server{
-    listen 8080;
-    server_name _;
-    location / {
-        proxy_set_header X-Forwarded-Host $host;
-        proxy_set_header X-Forwarded-Server $host;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_pass http://127.0.0.1:9000/;
-    }
-}
-EOF'
-
-sudo nginx -t
-sudo systemctl start nginx
-sudo systemctl enable nginx
