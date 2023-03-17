@@ -1,4 +1,4 @@
-module "prometheus" {
+module "utility" {
     source = "../"
     instance_type_utility = "t3.large"
     volume_size_utility = "50"
