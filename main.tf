@@ -75,7 +75,7 @@ resource "aws_security_group" "utility_sg" {
   }
 }
 resource "aws_iam_role" "ssm_access" {
-  name = "utility-ssm-access-role-${var.environment}"
+  name = "utility-ssm-access-role"
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
@@ -98,6 +98,6 @@ resource "aws_iam_role_policy_attachment" "cw_agent_policy" {
   role = aws_iam_role.ssm_access.name
 }
 resource "aws_iam_instance_profile" "ssm_access_instance_profile" {
-  name = "monitoring-ssm-access-instance-profile-${var.environment}"
+  name = "utility-ssm-access-instance-profile"
   role = aws_iam_role.ssm_access.name
 }
